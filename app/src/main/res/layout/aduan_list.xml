@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+
+    >
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_height="wrap_content"
+    android:layout_weight=".70"
+    android:layout_width="0dp"
+    >
+
+    <TextView
+        android:id="@+id/aduan"
+        android:layout_marginTop="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20px" />
+    <TextView
+        android:id="@+id/tanggal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:gravity="right"
+        android:textSize="10px" />
+
+</LinearLayout>
+
+<LinearLayout
+    android:layout_width="0dp"
+    android:layout_weight=".30"
+    android:layout_height="fill_parent"
+    android:gravity="center"
+
+    >
+    <ImageView
+        android:id="@+id/checktindaklanjut"
+        android:layout_width="20dp"
+        android:layout_gravity="center_vertical"
+        android:layout_height="20dp"
+        android:src="@drawable/ic_check"
+
+        />
+
+</LinearLayout>
+</LinearLayout> 

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.muzakki.ahmad.sipadupelanggan" >
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_sipadu"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+        >
+        <activity
+            android:name=".main.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".main.Login"
+            android:label="Sipadu Login" >
+
+        </activity>
+        <!-- single task agar tidak dibuat ulang (onCreate)-->
+        <activity
+            android:launchMode="singleTask"
+            android:name=".main.Aduan"
+            android:label="Daftar Aduan">
+
+        </activity>
+        <activity android:label="Sipadu Login" android:name=".main.LoginSetting" android:parentActivityName=".main.Login">
+
+        </activity>
+        <activity android:label="Tambah Aduan" android:name=".main.AduanTambah" android:parentActivityName=".main.Aduan">
+
+        </activity>
+
+        <activity android:label="Detail Aduan" android:name=".main.AduanDetail" android:parentActivityName=".main.Aduan">
+
+        </activity>
+
+
+        <service android:name=".service.MqttService" ></service>
+        <receiver android:name=".main.Receiver" ></receiver>
+
+    </application>
+
+</manifest>
